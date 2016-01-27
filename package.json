@@ -1,0 +1,21 @@
+{
+  "name": "github-wiki-slack-notifier",
+  "version": "1.0.0",
+  "description": "Posts edits to a GitHub wiki to Slack",
+  "keywords": [
+    "slack",
+    "github",
+    "wiki"
+  ],
+  "scripts": {
+    "web": "coffee server.coffee"
+  },
+  "author": "Ian Langworth <ian@artillery.com>",
+  "license": "MIT",
+  "dependencies": {
+    "coffee-script": "1.10.0",
+    "getenv": "0.6.0",
+    "github-webhook-handler": "0.5.0",
+    "node-slack": "0.0.7"
+  }
+}
