@@ -11,7 +11,7 @@ getenv = require 'getenv'
 createHandler = require 'github-webhook-handler'
 
 options = getenv.multi
-  port: ['PORT', 8080, 'integer']
+  port: ['PORT', undefined, 'int']
   githubSecret: 'GITHUB_WEBHOOK_SECRET'
   slackUrl: 'SLACK_WEBHOOK_URL'
 
