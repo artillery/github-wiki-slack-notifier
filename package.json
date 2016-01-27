@@ -8,7 +8,7 @@
     "wiki"
   ],
   "scripts": {
-    "web": "coffee server.coffee"
+    "start": "coffee server.coffee"
   },
   "author": "Ian Langworth <ian@artillery.com>",
   "license": "MIT",
