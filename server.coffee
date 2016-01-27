@@ -27,7 +27,7 @@ server = http.createServer (req, res) ->
     res.end 'file not found'
 
 server.listen options.port, ->
-  {address, family, port}
+  {address, family, port} = server.address()
   console.log "Listening on #{ address }:#{ port } via #{ family }"
 
 handler.on 'error', (err) -> console.error "WebHook handler error:", err
