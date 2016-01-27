@@ -35,9 +35,10 @@ handler.on 'error', (err) -> console.error "WebHook handler error:", err
 handler.on 'gollum', (event) ->
   p = event.payload
   if p.pages.length == 1
-    text = "Wiki page _#{ p.pages[0].page_name }_ was updated: #{ p.pages[0].html_url }"
+    page = p.pages[0]
+    text = "Wiki page _#{ page.page_name }_ was #{ page.action } by #{ p.sender.login }: #{ page.html_url }"
   else
-    text = "#{ p.pages.length } wiki pages were updated: #{ p.repository.html_url }/wiki"
+    text = "#{ p.pages.length } wiki pages were modified: #{ p.repository.html_url }/wiki"
   console.log text
   slack.send
     text: text
